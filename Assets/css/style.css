@@ -108,11 +108,12 @@ a{
 
 .content > p{
   padding-left: 2%;
-  width: 55%;
+  width: 53%;
   
 }
 
 .content > img{
+  padding-left: 2%;
   height: auto;
   width: 20%;
 }
