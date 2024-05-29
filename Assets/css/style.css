@@ -1,4 +1,4 @@
-/* color scheme sourced from http://khroma.co/generator/ */
+
 :root {
   --dark-theme: #33393f;
   --blue-theme: #1ea9e5;
@@ -9,12 +9,15 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* border-style:dashed ; */
-  border-color: red;
   background-color: var(--background);
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 
+h1{
+  background-color: var(--blue-theme);
+  padding: .5% .5% .5% 5%;
+}
 
 header{
   display: flex;
@@ -26,10 +29,7 @@ header{
   
 }
 
-h1{
-  background-color: var(--blue-theme);
-  padding: .5% .5% .5% 5%;
-}
+
 
 header nav ul{
   list-style-type: none;
@@ -112,17 +112,26 @@ a{
   
 }
 
-.content > img{
-  padding-left: 2%;
-  height: auto;
+
+
+
+
+#img-container{
   width: 20%;
+  padding-left: 2%;
 }
 
+.content > div > img{
+  object-fit: cover;
+  width: 100%;
+
+}
 .work {
   display: flex;
   justify-content:flex-start;
   align-items:flex-end;
   height: 400px;
+  /* height: 100%; */
   width: 95%;
   margin-bottom: 25px;
   background-image: url("../images/work-img.jpeg");
@@ -132,7 +141,6 @@ a{
   
 
 }
-
 .half-box {
   display: flex;
   justify-content:flex-start;
@@ -174,6 +182,7 @@ a{
 .half-box > h3{
   margin: 0 0 2% 0%;
   padding: 2%;
+  background-color: var(--blue-theme);
 }
 
 .work > h3{
@@ -208,5 +217,13 @@ a{
 .half-box:hover {
   filter: brightness(110%);
   box-shadow: inset 0px 0px 8px var(--blue-theme), 0 0 15px var(--blue-theme);
+}
+
+/* Media query */
+@media only screen and (min-width: 1024px) {
+  nav ul li a,
+  #contact-me div a {
+    font-size: 24px;
+  }
 }
 
