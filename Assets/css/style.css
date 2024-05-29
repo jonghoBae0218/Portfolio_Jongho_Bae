@@ -1,0 +1,211 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+  --dark-theme: #33393f;
+  --blue-theme: #1ea9e5;
+  --background: rgb(212, 225, 229);
+}
+* {
+  color: var(--dark-theme);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border-style:dashed ; */
+  border-color: red;
+  background-color: var(--background);
+}
+
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: var(--dark-theme);
+  height: 80px;
+  
+}
+
+h1{
+  background-color: var(--blue-theme);
+  padding: .5% .5% .5% 5%;
+}
+
+header nav ul{
+  list-style-type: none;
+  display: flex;
+  font-size: 20x;
+  
+ 
+  
+}
+
+header nav ul li{
+  padding: 8px;
+  border-bottom: var(--blue-theme);
+  background-color: var(--dark-theme);
+  
+}
+
+a{
+  background-color: var(--dark-theme);
+  color: var(--blue-theme);
+  text-decoration: none;
+  border-bottom: 1px solid var(--blue-theme);
+}
+
+
+
+
+
+
+
+/* Sets main image of the website. */
+.hero {
+  display: flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/background-image.jpeg");
+  background-size: cover;
+  background-position: center;
+  
+
+}
+
+.hero h2{
+  padding: 1%;
+  background-color: var(--blue-theme);
+  margin: 2% 5%;
+  
+}
+
+.content{
+  display: flex;
+  margin: 1%;
+}
+
+.content h2{
+  width: 25%;
+  border-right: 1px solid var(--dark-theme);
+  text-align: right;
+  padding-right: 2%;
+}
+
+.content > div{
+  width: 75%;
+  
+}
+
+.content > h2{
+  width: 25%;
+  font-size: 40px;
+}
+
+
+
+.content > p{
+  padding-left: 2%;
+  width: 55%;
+  
+}
+
+.content > img{
+  height: auto;
+  width: 20%;
+}
+
+.work {
+  display: flex;
+  justify-content:flex-start;
+  align-items:flex-end;
+  height: 400px;
+  width: 95%;
+  margin-bottom: 25px;
+  background-image: url("../images/work-img.jpeg");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--blue-theme);
+  
+
+}
+
+.half-box {
+  display: flex;
+  justify-content:flex-start;
+  align-items:flex-end;
+  height: 200px;
+  width: 45%;
+  margin-bottom: 25px;
+  margin: 2.5%;
+  border: 2px solid var(--blue-theme);
+  
+}
+
+#pj1{
+  background-image: url("../images/cs-img-1.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+#pj2{
+  background-image: url("../images/cs-img-2.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+#pj3{
+  background-image: url("../images/cs-img-3.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+#pj4{
+  background-image: url("../images/cs-img-4.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.work > h3,
+.half-box > h3{
+  margin: 0 0 2% 0%;
+  padding: 2%;
+}
+
+.work > h3{
+  font-size: 25px;
+}
+
+.content > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} 
+
+#contact > div{
+  justify-content: space-evenly;
+  
+}
+
+#contact-me > div{
+  justify-content: space-around;
+  
+}
+
+#contact-me > div > a{
+  background-color: var(--background);
+  color:var(--dark-theme);
+  border-bottom: 2px solid var(--dark-theme);
+}
+
+.work:hover,
+.half-box:hover {
+  filter: brightness(110%);
+  box-shadow: inset 0px 0px 8px var(--blue-theme), 0 0 15px var(--blue-theme);
+}
+
