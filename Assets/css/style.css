@@ -1,9 +1,12 @@
 
+/* THheme color setup */
 :root {
   --dark-theme: #33393f;
   --blue-theme: #1ea9e5;
   --background: rgb(212, 225, 229);
 }
+
+/* Universial style setup */
 * {
   color: var(--dark-theme);
   box-sizing: border-box;
@@ -13,13 +16,9 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
-
-h1{
-  background-color: var(--blue-theme);
-  padding: .5% .5% .5% 5%;
-}
-
+/* Header setup. */
 header{
+  /* locate contents on left and right end using flex box */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,9 +28,17 @@ header{
   
 }
 
+/* h1. Setting for portfolio name on header banner */
+h1{
+  background-color: var(--blue-theme);
+  padding: .5% .5% .5% 5%;
+}
+
+
 
 
 header nav ul{
+  /* flexbox property to control 'li' inside this box */
   list-style-type: none;
   display: flex;
   font-size: 20x;
@@ -40,6 +47,7 @@ header nav ul{
   
 }
 
+ /* background and margin setup of header hyperlink */
 header nav ul li{
   padding: 8px;
   border-bottom: var(--blue-theme);
@@ -47,6 +55,7 @@ header nav ul li{
   
 }
 
+/* Hyperlink setup for both header and contact-me */
 a{
   background-color: var(--dark-theme);
   color: var(--blue-theme);
@@ -75,6 +84,7 @@ a{
 
 }
 
+/* Subtitle setup inside hero image */
 .hero h2{
   padding: 1%;
   background-color: var(--blue-theme);
@@ -82,30 +92,42 @@ a{
   
 }
 
+/* style setup for each section */
 .content{
+  /* Flex property to align section title and section content */
   display: flex;
   margin: 1%;
 }
 
+/* Section title setup */
 .content h2{
   width: 25%;
   border-right: 1px solid var(--dark-theme);
   text-align: right;
   padding-right: 2%;
+  font-size: 40px;
 }
 
+
+/* Set the width of the content for each section */
 .content > div{
   width: 75%;
   
 }
 
-.content > h2{
-  width: 25%;
-  font-size: 40px;
+/* Image container for applicant photo setup */
+#img-container{
+  width: 20%;
+  padding-left: 2%;
 }
 
+/* Applicant photo setup */
+.content > div > img{
+  object-fit: cover;
+  width: 100%;
+}
 
-
+/* Setup for text in about-me section */
 .content > p{
   padding-left: 2%;
   width: 53%;
@@ -113,27 +135,16 @@ a{
 }
 
 
-
-
-
-#img-container{
-  width: 20%;
-  padding-left: 2%;
-}
-
-.content > div > img{
-  object-fit: cover;
-  width: 100%;
-
-}
+/* Main workbox setup */
 .work {
+  /* use flexbox to locate h3 in desired location */
   display: flex;
   justify-content:flex-start;
   align-items:flex-end;
   height: 400px;
-  /* height: 100%; */
   width: 95%;
   margin-bottom: 25px;
+  /* Setup background image */
   background-image: url("../images/work-img.jpeg");
   background-size: cover;
   background-position: center;
@@ -141,7 +152,9 @@ a{
   
 
 }
+/* Setup smaller boxes in work section */
 .half-box {
+  /* use flexbox to locate h3 in desired location */
   display: flex;
   justify-content:flex-start;
   align-items:flex-end;
@@ -152,25 +165,31 @@ a{
   border: 2px solid var(--blue-theme);
   
 }
-
+/* Background image for half-box1 */
 #pj1{
   background-image: url("../images/cs-img-1.jpg");
   background-size: cover;
   background-position: center;
 
 }
+
+/* Background image for half-box2 */
 #pj2{
   background-image: url("../images/cs-img-2.jpg");
   background-size: cover;
   background-position: center;
 
 }
+
+/* Background image for half-box3 */
 #pj3{
   background-image: url("../images/cs-img-3.jpg");
   background-size: cover;
   background-position: center;
 
 }
+
+/* Background image for half-box4 */
 #pj4{
   background-image: url("../images/cs-img-4.jpg");
   background-size: cover;
@@ -178,6 +197,7 @@ a{
 
 }
 
+/* Work and halfbox subtitle location setup */
 .work > h3,
 .half-box > h3{
   margin: 0 0 2% 0%;
@@ -185,10 +205,12 @@ a{
   background-color: var(--blue-theme);
 }
 
+/* Override h3 in .work to have bigger font size */
 .work > h3{
   font-size: 25px;
 }
 
+/* Setup flexbox style for content of each section */
 .content > div{
   display: flex;
   flex-direction: row;
@@ -197,29 +219,36 @@ a{
   flex-wrap: wrap;
 } 
 
+/* override flex box spacing for dontact section */
 #contact > div{
   justify-content: space-evenly;
   
 }
 
+/* Setup for content of Contact section */
 #contact-me > div{
+  /* Override spacing to space around */
   justify-content: space-around;
   
 }
 
+/* Setup hyperlink style */
 #contact-me > div > a{
   background-color: var(--background);
   color:var(--dark-theme);
   border-bottom: 2px solid var(--dark-theme);
 }
 
+
+/* Setup box style when hovered */
 .work:hover,
 .half-box:hover {
-  filter: brightness(110%);
+  filter: brightness(115%);
   box-shadow: inset 0px 0px 8px var(--blue-theme), 0 0 15px var(--blue-theme);
 }
 
-/* Media query */
+
+/* Media query to change text size */
 @media only screen and (min-width: 1024px) {
   nav ul li a,
   #contact-me div a {
